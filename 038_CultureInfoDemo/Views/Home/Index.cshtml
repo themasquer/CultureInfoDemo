@@ -1,0 +1,19 @@
+﻿@model TestModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h3>Display</h3>
+Double: @Html.DisplayFor(model => model.TestDoubleDisplay)
+<br />
+DateTime: @Html.DisplayFor(model => model.TestDateTimeDisplay)
+<hr />
+<h3>Edit</h3>
+<form asp-action="Index">
+    Double: <input asp-for="TestDouble" />
+    <br />
+    DateTime: <input asp-for="TestDateTime" type="text" />
+    <br />
+    <button type="submit">Submit</button>
+</form>
